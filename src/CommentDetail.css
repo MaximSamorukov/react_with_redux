@@ -1,0 +1,19 @@
+.box.red {
+  color: red;
+  font-size: 15px;
+}
+
+.box.green {
+  color: green;
+  font-size: 15px;
+}
+
+.otherbox.red {
+  color: orange;
+  font-size: 25px;
+}
+
+.otherbox.green {
+  color: yellow;
+  font-size: 25px;
+}

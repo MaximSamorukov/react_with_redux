@@ -8,6 +8,10 @@ if (module.hot) {
 }
 
 const App = () => {
+  window.navigator.geolocation.getCurrentPosition(
+    ({ coords: { latitude, longitude }}) => console.log(latitude, longitude),
+    (error) => console.log(error)
+  );
   return (
     <div className="ui comments">
       <h3 className="ui dividing header">Comments</h3>
@@ -20,25 +24,10 @@ const App = () => {
               <ApprovalCard
                 component={
                   <Comment name="Nick" text="Some comment" />
-              }
-            />
+                }
+              />
             }
           />
-        }
-      />
-      <ApprovalCard
-        component={
-          <Comment name="Nick" text="Some comment" />
-        }
-      />
-      <ApprovalCard
-        component={
-          <Comment name="Leen" text="Some cool comment" />
-        }
-      />
-      <ApprovalCard
-        component={
-          <Comment name="Maks" text="Text about" />
         }
       />
     </div>

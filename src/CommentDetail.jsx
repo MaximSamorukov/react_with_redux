@@ -1,28 +1,19 @@
 import React from "react";
+import './CommentDetail.css';
 
 const Comment = ({ comments, name, text }) => {
+
   return (
-    <div className="comment">
-      <a className="avatar">
-        <img src="" alt="some img" />
-      </a>
-      <div className="content">
-        <a className="author">{name}</a>
-        <div className="metadata">
-          <span className="date">{new Date().toLocaleDateString()}</span>
-        </div>
-        <div className="text">
-          {text}
-        </div>
-        <div className="actions">
-          <a className="reply">Reply</a>
-        </div>
+    <>
+      <div className="box">
+        <div className="box green">Green</div>
+        <div className="box red">Red</div>
       </div>
-      {comments && (
-        <div className="comments">
-          {comments}
-        </div>)}
-    </div>
+      <div className="otherbox">
+        <div className="otherbox green">Green</div>
+        <div className="otherbox red">Red</div>
+      </div>
+    </>
   )
 };
 
